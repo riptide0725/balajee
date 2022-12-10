@@ -11,6 +11,7 @@
       integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="main.css" />
   </head>
   <body>
     <style>
@@ -26,8 +27,36 @@
         padding-bottom: 50px;
         padding-left: 50px;
       }
-      .col {
+      /* .col {
         height: 450px;
+      } */
+      .hgt {
+        aspect-ratio: 1/1;
+      }
+      body {
+        overflow-x: hidden; /* Hide horizontal scrollbar */
+      }
+      .bg-img-1 {
+        background-image: url(https://balajeegroup.com/Images/8.jpg);
+      }
+      .bg-img-2 {
+        background-image: url(https://balajeegroup.com/Images/13.jpg);
+      }
+      .bg-img-3 {
+        background-image: url(https://balajeegroup.com/Images/12.jpg);
+      }
+      .carousel-image {
+        height: 70vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .carousel-control-prev-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+      }
+
+      .carousel-control-next-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
       }
     </style>
     <script
@@ -35,6 +64,12 @@
       integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <!-- experimentation -->
+    <div style="height: 7rem" class="p-5 bg-light shadow-sm">
+      hi,this div will have logo and contact info
+    </div>
+    <!-- experimentationends -->
+
     <nav class="navbar navbar-expand-md bg-info">
       <div class="container-fluid">
         <a href="#" class="navbar-brand"
@@ -46,7 +81,7 @@
           data-bs-toggle="collapse"
           data-bs-target="#nav"
         >
-          <span class="navabr-toggler-icon">click me</span>
+          <span class="navbar-toggler-icon"></span>
         </button>
         <!-- #wrapping entire ul element so to allow popping -->
         <div class="collapse navbar-collapse" id="nav">
@@ -85,11 +120,11 @@
         </div>
       </div>
     </nav>
-    <br />
-    <br />
+    <!-- navbar ends carousel starts -->
+    <!-- experiment using background image instead of image carousel-image -->
     <div class="row">
-      <div class="col-3"></div>
-      <div class="col-6">
+      <!-- <div class="col-3"></div> -->
+      <div class="col-12">
         <div
           id="carouselExampleControls"
           class="carousel slide"
@@ -111,11 +146,14 @@
             ></li>
           </ol>
           <div class="carousel-inner">
-            <div class="carousel-item active" data-bs-interval="2000">
-              <img
+            <div
+              class="carousel-item active carousel-image bg-img-1"
+              data-bs-interval="2000"
+            >
+              <!-- <img
                 src="https://balajeegroup.com/Images/1.jpg"
                 class="img-fluid"
-              />
+              /> -->
               <div class="carousel-caption d-none d-md-block">
                 <h5>First slide label</h5>
                 <p>
@@ -124,11 +162,14 @@
                 </p>
               </div>
             </div>
-            <div class="carousel-item" data-bs-interval="2000">
-              <img
+            <div
+              class="carousel-item carousel-image bg-img-2"
+              data-bs-interval="2000"
+            >
+              <!-- <img
                 src="https://balajeegroup.com/Images/6.jpg"
                 class="img-fluid"
-              />
+              /> -->
               <div class="carousel-caption d-none d-md-block">
                 <h5>Second slide label</h5>
                 <p>
@@ -137,11 +178,14 @@
                 </p>
               </div>
             </div>
-            <div class="carousel-item" data-bs-interval="2000">
-              <img
+            <div
+              class="carousel-item carousel-image bg-img-3"
+              data-bs-interval="2000"
+            >
+              <!-- <img
                 src="https://balajeegroup.com/Images/8.jpg"
                 class="img-fluid"
-              />
+              /> -->
               <div class="carousel-caption d-none d-md-block">
                 <h5>Third slide label</h5>
                 <p>
@@ -171,63 +215,321 @@
           </button>
         </div>
       </div>
-      <div class="col-3"></div>
+      <!-- <div class="col-3"></div> -->
     </div>
     <div class="bg-danger">hihi</div>
     <br />
     <br />
 
     <div>
-      <h1>Completed projects</h1>
+      <h1 class="p-5 bg-light">Completed projects</h1>
       <div class="container">
         <div class="row row-cols-2 row-cols-lg-3 g-2 g-lg-3">
           <div class="col">
-            <div class="p-3 border bg-light h-100">Row column</div>
+            <div class="p-3 border bg-light hgt">
+              <!-- adding card -->
+              <div class="row h-90">
+                <div class="col-12">
+                  <div class="card text-white bg-dark" style="">
+                    <img
+                      src="https://balajeegroup.com/thumbnails/HSE.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col">
-            <div class="p-3 border bg-light h-100">Row column</div>
+            <div class="p-3 border bg-light hgt">
+              <!-- adding card -->
+              <div class="row h-90">
+                <div class="col-12">
+                  <div class="card" style="">
+                    <img
+                      src="https://balajeegroup.com/thumbnails/HSE.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col">
-            <div class="p-3 border bg-light h-100">Row column</div>
+            <div class="p-3 border bg-light hgt">
+              <!-- adding card -->
+              <div class="row h-90">
+                <div class="col-12">
+                  <div class="card" style="">
+                    <img
+                      src="https://balajeegroup.com/thumbnails/HSE.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col">
-            <div class="p-3 border bg-light h-100">Row column</div>
+            <div class="p-3 border bg-light hgt">
+              <!-- adding card -->
+              <div class="row h-90">
+                <div class="col-12">
+                  <div class="card" style="">
+                    <img
+                      src="https://balajeegroup.com/thumbnails/HSE.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col">
-            <div class="p-3 border bg-light h-100">Row column</div>
+            <div class="p-3 border bg-light hgt">
+              <!-- adding card -->
+              <div class="row h-90">
+                <div class="col-12">
+                  <div class="card" style="">
+                    <img
+                      src="https://balajeegroup.com/thumbnails/HSE.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col">
-            <div class="p-3 border bg-light h-100">Row column</div>
+            <div class="p-3 border bg-light hgt">
+              <!-- adding card -->
+              <div class="row h-90">
+                <div class="col-12">
+                  <div class="card" style="">
+                    <img
+                      src="https://balajeegroup.com/thumbnails/HSE.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-      <h1>Ongoing projects</h1>
+      <h1 class="p-5 bg-light">Ongoing projects</h1>
       <div class="container">
         <div class="row row-cols-2 row-cols-lg-3 g-2 g-lg-3">
           <div class="col">
-            <div class="p-3 border bg-light h-100">Row column</div>
+            <div class="p-3 border bg-light hgt">
+              <!-- adding card -->
+              <div class="row h-90">
+                <div class="col-12">
+                  <div class="card" style="">
+                    <img
+                      src="https://balajeegroup.com/thumbnails/CAPTURE_T.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col">
-            <div class="p-3 border bg-light h-100">Row column</div>
+            <div class="p-3 border bg-light hgt">
+              <!-- adding card -->
+              <div class="row h-90">
+                <div class="col-12">
+                  <div class="card" style="">
+                    <img
+                      src="https://balajeegroup.com/thumbnails/CAPTURE_T.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col">
-            <div class="p-3 border bg-light h-100">Row column</div>
+            <div class="p-3 border bg-light hgt">
+              <!-- adding card -->
+              <div class="row h-90">
+                <div class="col-12">
+                  <div class="card" style="">
+                    <img
+                      src="https://balajeegroup.com/thumbnails/CAPTURE_T.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col">
-            <div class="p-3 border bg-light h-100">Row column</div>
+            <div class="p-3 border bg-light hgt">
+              <!-- adding card -->
+              <div class="row h-90">
+                <div class="col-12">
+                  <div class="card" style="">
+                    <img
+                      src="https://balajeegroup.com/thumbnails/CAPTURE_T.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col">
-            <div class="p-3 border bg-light h-100">Row column</div>
+            <div class="p-3 border bg-light hgt">
+              <!-- adding card -->
+              <div class="row h-90">
+                <div class="col-12">
+                  <div class="card" style="">
+                    <img
+                      src="https://balajeegroup.com/thumbnails/CAPTURE_T.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
           <div class="col">
-            <div class="p-3 border bg-light h-100">Row column</div>
+            <div class="p-3 border bg-light h-100">
+              <!-- adding card -->
+              <div class="row h-90">
+                <div class="col-12">
+                  <div class="card" style="">
+                    <img
+                      src="https://balajeegroup.com/thumbnails/CAPTURE_T.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <hr />
-    <div>need to add stuff</div>
+    <div>
+      Carrers
+      <div class="row"></div>
+    </div>
     <hr />
+    <!-- carrers -->
+    <h1>Carrers</h1>
+
     <div class="container">
       <footer class="py-5">
         <div class="row">
