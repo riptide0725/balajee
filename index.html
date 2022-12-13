@@ -58,6 +58,10 @@
       .carousel-control-next-icon {
         background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
       }
+      /* new css practice */
+      .sty1 {
+        display: inline;
+      }
     </style>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
@@ -65,16 +69,40 @@
       crossorigin="anonymous"
     ></script>
     <!-- experimentation -->
-    <div style="height: 7rem" class="p-5 bg-light shadow-sm">
-      hi,this div will have logo and contact info
+    <div style="" class="p-2 bg-light shadow-sm">
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-4">
+          <a href="#" class="navbar-brand"
+            ><img src="https://balajeegroup.com/Images/BICPL_LOGO.png" alt=""
+          /></a>
+        </div>
+        <div class="col-6">
+          <!-- new stuff -->
+          <div class="row p-3">
+            <div class="col-3">
+              <p style="margin-bottom: 0">Call Us</p>
+              <p>573849494</p>
+            </div>
+            <div class="col-3">
+              <p style="margin-bottom: 0">Email Us</p>
+              <p>balajee@gmail.com</p>
+            </div>
+            <div style="padding-right: 0" class="col-3">
+              <p style="margin-bottom: 0">ISO certificate</p>
+              <p>483848900</p>
+            </div>
+            <div style="margin: 0; padding: 0" class="col-3">
+              <button type="button" class="btn btn-primary">Know More</button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
     <!-- experimentationends -->
 
     <nav class="navbar navbar-expand-md bg-info">
       <div class="container-fluid">
-        <a href="#" class="navbar-brand"
-          ><img src="https://balajeegroup.com/Images/BICPL_LOGO.png" alt=""
-        /></a>
         <!-- #button toggler -->
         <button
           class="navbar-toggler"
@@ -86,12 +114,15 @@
         <!-- #wrapping entire ul element so to allow popping -->
         <div class="collapse navbar-collapse" id="nav">
           <ul class="navbar-nav">
+            <!-- home start -->
             <li class="nav-item">
               <a href="#" class="nav-link active">Home</a>
             </li>
+            <!-- home end -->
+            <!-- about us start -->
             <li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Business</a></li>
-            <li class="nav-item"><a href="#" class="nav-link">Projects</a></li>
+            <!-- about us end -->
+            <!-- business start -->
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
@@ -100,21 +131,96 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                finance
+                Business
               </a>
               <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">1</a></li>
-                <li><a class="dropdown-item" href="#">2</a></li>
-                <li><hr class="dropdown-divider" /></li>
+                <li><a class="dropdown-item" href="#">Power Projects</a></li>
                 <li>
-                  <a class="dropdown-item" href="#">3</a>
+                  <a class="dropdown-item" href="#">Infrastructure Projects</a>
                 </li>
               </ul>
             </li>
+            <!-- business end -->
+            <!-- services start -->
+            <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+            <!-- services end -->
+            <!-- projects start -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Projects
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">Projects Completed</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Clintele</a></li>
+              </ul>
+            </li>
+            <!-- projects end -->
+            <!-- about balajee start -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                About Balajee
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">Board of directors</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Mission and Vison</a></li>
+              </ul>
+            </li>
+            <!-- about balajee end -->
 
-            <li class="nav-item"><a href="#" class="nav-link">Careers</a></li>
-            <li class="nav-item">
-              <a href="#" class="nav-link"> Contact Us</a>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Corporate Governance
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">C.S.R</a>
+                </li>
+                <li><a class="dropdown-item" href="#">H.S.E</a></li>
+                <li><a class="dropdown-item" href="#">Q.A</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Vigil Mechanism Policy</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Careers
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">Recruitment Policy</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Life in Balajee</a></li>
+                <li><a class="dropdown-item" href="#">Apply now</a></li>
+              </ul>
             </li>
           </ul>
         </div>
@@ -242,7 +348,56 @@
                         Some quick example text to build on the card title and
                         make up the bulk of the card's content.
                       </p>
-                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                      <!-- Button trigger modal -->
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal"
+                      >
+                        Launch demo modal
+                      </button>
+                      <!-- modal coding -->
+                      <!-- Modal -->
+                      <div
+                        class="modal fade"
+                        id="exampleModal"
+                        tabindex="-1"
+                        aria-labelledby="exampleModalLabel"
+                        aria-hidden="true"
+                      >
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">
+                                Modal title
+                              </h5>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">
+                              <p>hello first</p>
+                            </div>
+                            <div class="modal-footer">
+                              <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-bs-dismiss="modal"
+                              >
+                                Close
+                              </button>
+                              <button type="button" class="btn btn-primary">
+                                Save changes
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- ends -->
                     </div>
                   </div>
                 </div>
@@ -254,7 +409,7 @@
               <!-- adding card -->
               <div class="row h-90">
                 <div class="col-12">
-                  <div class="card" style="">
+                  <div class="card text-white bg-dark" style="">
                     <img
                       src="https://balajeegroup.com/thumbnails/HSE.jpg"
                       class="card-img-top"
@@ -278,7 +433,7 @@
               <!-- adding card -->
               <div class="row h-90">
                 <div class="col-12">
-                  <div class="card" style="">
+                  <div class="card text-white bg-dark" style="">
                     <img
                       src="https://balajeegroup.com/thumbnails/HSE.jpg"
                       class="card-img-top"
@@ -302,7 +457,7 @@
               <!-- adding card -->
               <div class="row h-90">
                 <div class="col-12">
-                  <div class="card" style="">
+                  <div class="card text-white bg-dark" style="">
                     <img
                       src="https://balajeegroup.com/thumbnails/HSE.jpg"
                       class="card-img-top"
@@ -326,7 +481,7 @@
               <!-- adding card -->
               <div class="row h-90">
                 <div class="col-12">
-                  <div class="card" style="">
+                  <div class="card text-white bg-dark" style="">
                     <img
                       src="https://balajeegroup.com/thumbnails/HSE.jpg"
                       class="card-img-top"
@@ -350,7 +505,7 @@
               <!-- adding card -->
               <div class="row h-90">
                 <div class="col-12">
-                  <div class="card" style="">
+                  <div class="card text-white bg-dark" style="">
                     <img
                       src="https://balajeegroup.com/thumbnails/HSE.jpg"
                       class="card-img-top"
@@ -379,7 +534,7 @@
               <!-- adding card -->
               <div class="row h-90">
                 <div class="col-12">
-                  <div class="card" style="">
+                  <div class="card text-white bg-dark" style="">
                     <img
                       src="https://balajeegroup.com/thumbnails/CAPTURE_T.jpg"
                       class="card-img-top"
@@ -403,7 +558,7 @@
               <!-- adding card -->
               <div class="row h-90">
                 <div class="col-12">
-                  <div class="card" style="">
+                  <div class="card text-white bg-dark" style="">
                     <img
                       src="https://balajeegroup.com/thumbnails/CAPTURE_T.jpg"
                       class="card-img-top"
@@ -427,7 +582,7 @@
               <!-- adding card -->
               <div class="row h-90">
                 <div class="col-12">
-                  <div class="card" style="">
+                  <div class="card text-white bg-dark" style="">
                     <img
                       src="https://balajeegroup.com/thumbnails/CAPTURE_T.jpg"
                       class="card-img-top"
@@ -451,7 +606,7 @@
               <!-- adding card -->
               <div class="row h-90">
                 <div class="col-12">
-                  <div class="card" style="">
+                  <div class="card text-white bg-dark" style="">
                     <img
                       src="https://balajeegroup.com/thumbnails/CAPTURE_T.jpg"
                       class="card-img-top"
@@ -475,7 +630,7 @@
               <!-- adding card -->
               <div class="row h-90">
                 <div class="col-12">
-                  <div class="card" style="">
+                  <div class="card text-white bg-dark" style="">
                     <img
                       src="https://balajeegroup.com/thumbnails/CAPTURE_T.jpg"
                       class="card-img-top"
@@ -499,7 +654,7 @@
               <!-- adding card -->
               <div class="row h-90">
                 <div class="col-12">
-                  <div class="card" style="">
+                  <div class="card text-white bg-dark" style="">
                     <img
                       src="https://balajeegroup.com/thumbnails/CAPTURE_T.jpg"
                       class="card-img-top"
@@ -529,119 +684,123 @@
     <hr />
     <!-- carrers -->
     <h1>Carrers</h1>
+    <!-- footer start -->
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-dark text-muted">
+      <section class="p-3">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3"></i>Balajee Group
+              </h6>
+              <p>
+                Balajee Infratech & Constructions Private Limited is keen to
+                focus on developing skills in the related service sector, an
+                oppurtuinity where prospects are expected to be more over the
+                years and to participate in the emerging growth of tomorrow.
+              </p>
+              <p>
+                <a href="#!" class="text-reset">About Us</a>
+              </p>
+            </div>
+            <!-- Grid column -->
 
-    <div class="container">
-      <footer class="py-5">
-        <div class="row">
-          <div class="col-6 col-md-2 mb-3">
-            <h5>Section</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">Home</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">Features</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">Pricing</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">FAQs</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">About</a>
-              </li>
-            </ul>
-          </div>
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Business</h6>
+              <p>
+                <a href="#!" class="text-reset">Power Projects</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Infrastructure Projects</a>
+              </p>
+            </div>
+            <!-- Grid column -->
 
-          <div class="col-6 col-md-2 mb-3">
-            <h5>Section</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">Home</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">Features</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">Pricing</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">FAQs</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">About</a>
-              </li>
-            </ul>
-          </div>
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Services</h6>
+              <p>
+                <a href="#!" class="text-reset">Services we provide</a>
+              </p>
+            </div>
+            <!-- Grid column -->
 
-          <div class="col-6 col-md-2 mb-3">
-            <h5>Section</h5>
-            <ul class="nav flex-column">
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">Home</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">Features</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">Pricing</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">FAQs</a>
-              </li>
-              <li class="nav-item mb-2">
-                <a href="#" class="nav-link p-0 text-muted">About</a>
-              </li>
-            </ul>
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Projects</h6>
+              <p>
+                <a href="#!" class="text-reset">Projects we completed</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Clintele</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">About Balajee</h6>
+              <p>
+                <a href="#!" class="text-reset">Board of Directors</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Mission and Vision</a>
+              </p>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Corporate Governance</h6>
+              <p>
+                <a href="#!" class="text-reset">C.S.R</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">H.S.E</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Q.A</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Vigil Mechanism Policy</a>
+              </p>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Carrers</h6>
+              <p>
+                <a href="#!" class="text-reset">Recruitment Policy</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Life in Balajee</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Apply now</a>
+              </p>
+            </div>
           </div>
-
-          <div class="col-md-5 offset-md-1 mb-3">
-            <form>
-              <h5>Subscribe to our newsletter</h5>
-              <p>Monthly digest of what's new and exciting from us.</p>
-              <div class="d-flex flex-column flex-sm-row w-100 gap-2">
-                <label for="newsletter1" class="visually-hidden"
-                  >Email address</label
-                >
-                <input
-                  id="newsletter1"
-                  type="text"
-                  class="form-control"
-                  placeholder="Email address"
-                />
-                <button class="btn btn-primary" type="button">Subscribe</button>
-              </div>
-            </form>
-          </div>
+          <!-- Grid row -->
         </div>
+      </section>
+      <!-- Section: Links  -->
 
-        <div
-          class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"
+      <!-- Copyright -->
+      <div
+        class="text-center p-4"
+        style="background-color: rgba(0, 0, 0, 0.05)"
+      >
+        © 2021 Copyright:
+        <a class="text-reset fw-bold" href="https://mdbootstrap.com/"
+          >BalajeeGroups.com</a
         >
-          <p>&copy; 2022 Company, Inc. All rights reserved.</p>
-          <ul class="list-unstyled d-flex">
-            <li class="ms-3">
-              <a class="link-dark" href="#"
-                ><svg class="bi" width="24" height="24">
-                  <use xlink:href="#twitter" /></svg
-              ></a>
-            </li>
-            <li class="ms-3">
-              <a class="link-dark" href="#"
-                ><svg class="bi" width="24" height="24">
-                  <use xlink:href="#instagram" /></svg
-              ></a>
-            </li>
-            <li class="ms-3">
-              <a class="link-dark" href="#"
-                ><svg class="bi" width="24" height="24">
-                  <use xlink:href="#facebook" /></svg
-              ></a>
-            </li>
-          </ul>
-        </div>
-      </footer>
-    </div>
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
   </body>
 </html>
