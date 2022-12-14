@@ -1,43 +1,856 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <!-- Bootstrap CSS -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
     <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
-      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
       crossorigin="anonymous"
     />
-
-    <title>Hello, world!</title>
+    <link rel="stylesheet" href="main.css" />
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <style>
+      .carousel-item {
+        color: black;
+        position: relative;
+      }
+      .container1 {
+        position: absolute;
+        left: 0px;
+        right: 0;
+        bottom: 0px;
+        padding-bottom: 50px;
+        padding-left: 50px;
+      }
+      /* .col {
+        height: 450px;
+      } */
+      .hgt {
+        aspect-ratio: 1/1;
+      }
+      body {
+        overflow-x: hidden; /* Hide horizontal scrollbar */
+      }
+      .bg-img-1 {
+        background-image: url(https://balajeegroup.com/Images/8.jpg);
+      }
+      .bg-img-2 {
+        background-image: url(https://balajeegroup.com/Images/13.jpg);
+      }
+      .bg-img-3 {
+        background-image: url(https://balajeegroup.com/Images/12.jpg);
+      }
+      .carousel-image {
+        height: 70vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+      }
+      .carousel-control-prev-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+      }
 
-    <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
+      .carousel-control-next-icon {
+        background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='black' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+      }
+      /* new css practice */
+      .sty1 {
+        display: inline;
+      }
+    </style>
     <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
       crossorigin="anonymous"
     ></script>
+    <!-- experimentation -->
+    <div style="" class="p-2 bg-light shadow-sm">
+      <div class="row">
+        <div class="col-2"></div>
+        <div class="col-4">
+          <a href="#" class="navbar-brand"
+            ><img src="https://balajeegroup.com/Images/BICPL_LOGO.png" alt=""
+          /></a>
+        </div>
+        <div class="col-6">
+          <!-- new stuff -->
+          <div class="row p-3">
+            <div class="col-3">
+              <p style="margin-bottom: 0">Call Us</p>
+              <p>573849494</p>
+            </div>
+            <div class="col-3">
+              <p style="margin-bottom: 0">Email Us</p>
+              <p>balajee@gmail.com</p>
+            </div>
+            <div style="padding-right: 0" class="col-3">
+              <p style="margin-bottom: 0">ISO certificate</p>
+              <p>483848900</p>
+            </div>
+            <div style="margin: 0; padding: 0" class="col-3">
+              <button type="button" class="btn btn-primary">Know More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- experimentationends -->
 
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
-    -->
+    <nav class="navbar navbar-expand-md bg-info">
+      <div class="container-fluid">
+        <!-- #button toggler -->
+        <button
+          class="navbar-toggler"
+          data-bs-toggle="collapse"
+          data-bs-target="#nav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <!-- #wrapping entire ul element so to allow popping -->
+        <div class="collapse navbar-collapse" id="nav">
+          <ul class="navbar-nav">
+            <!-- home start -->
+            <li class="nav-item">
+              <a href="#" class="nav-link active">Home</a>
+            </li>
+            <!-- home end -->
+            <!-- about us start -->
+            <li class="nav-item"><a href="#" class="nav-link">About Us</a></li>
+            <!-- about us end -->
+            <!-- business start -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Business
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Power Projects</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Infrastructure Projects</a>
+                </li>
+              </ul>
+            </li>
+            <!-- business end -->
+            <!-- services start -->
+            <li class="nav-item"><a href="#" class="nav-link">Services</a></li>
+            <!-- services end -->
+            <!-- projects start -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Projects
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">Projects Completed</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Clintele</a></li>
+              </ul>
+            </li>
+            <!-- projects end -->
+            <!-- about balajee start -->
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                About Balajee
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">Board of directors</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Mission and Vison</a></li>
+              </ul>
+            </li>
+            <!-- about balajee end -->
+
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Corporate Governance
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">C.S.R</a>
+                </li>
+                <li><a class="dropdown-item" href="#">H.S.E</a></li>
+                <li><a class="dropdown-item" href="#">Q.A</a></li>
+                <li>
+                  <a class="dropdown-item" href="#">Vigil Mechanism Policy</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Careers
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="#">Recruitment Policy</a>
+                </li>
+                <li><a class="dropdown-item" href="#">Life in Balajee</a></li>
+                <li><a class="dropdown-item" href="#">Apply now</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar ends carousel starts -->
+    <!-- experiment using background image instead of image carousel-image -->
+    <div class="row">
+      <!-- <div class="col-3"></div> -->
+      <div class="col-12">
+        <div
+          id="carouselExampleControls"
+          class="carousel slide"
+          data-bs-ride="carousel"
+        >
+          <ol class="carousel-indicators">
+            <li
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide-to="0"
+              class="active"
+            ></li>
+            <li
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide-to="1"
+            ></li>
+            <li
+              data-bs-target="#carouselExampleControls"
+              data-bs-slide-to="2"
+            ></li>
+          </ol>
+          <div class="carousel-inner">
+            <div
+              class="carousel-item active carousel-image bg-img-1"
+              data-bs-interval="2000"
+            >
+              <!-- <img
+                src="https://balajeegroup.com/Images/1.jpg"
+                class="img-fluid"
+              /> -->
+              <div class="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Consectetur!
+                </p>
+              </div>
+            </div>
+            <div
+              class="carousel-item carousel-image bg-img-2"
+              data-bs-interval="2000"
+            >
+              <!-- <img
+                src="https://balajeegroup.com/Images/6.jpg"
+                class="img-fluid"
+              /> -->
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Second slide label</h5>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Consectetur!
+                </p>
+              </div>
+            </div>
+            <div
+              class="carousel-item carousel-image bg-img-3"
+              data-bs-interval="2000"
+            >
+              <!-- <img
+                src="https://balajeegroup.com/Images/8.jpg"
+                class="img-fluid"
+              /> -->
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Third slide label</h5>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Consectetur!
+                </p>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next"
+            type="button"
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+      <!-- <div class="col-3"></div> -->
+    </div>
+    <div class="bg-danger">hihi</div>
+    <br />
+    <br />
+
+    <div>
+      <h1 class="p-5 bg-light">Completed projects</h1>
+      <div class="container">
+        <div class="row row-cols-2 row-cols-lg-3 g-2 g-lg-3">
+          <div class="col">
+            <div class="p-3 border bg-light hgt">
+              <!-- adding card -->
+              <div class="row h-90">
+                <div class="col-12">
+                  <div class="card text-white bg-dark" style="">
+                    <img
+                      src="https://balajeegroup.com/thumbnails/HSE.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <!-- Button trigger modal -->
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal1"
+                      >
+                        Launch demo modal
+                      </button>
+
+                      <!-- Modal -->
+                      <div
+                        class="modal fade"
+                        id="exampleModal1"
+                        tabindex="-1"
+                        aria-labelledby="exampleModalLabel1"
+                        aria-hidden="true"
+                      >
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel1">
+                                Modal title
+                              </h5>
+                              <button
+                                type="button"
+                                class="btn-close"
+                                data-bs-dismiss="modal"
+                                aria-label="Close"
+                              ></button>
+                            </div>
+                            <div class="modal-body">...</div>
+                            <div class="modal-footer">
+                              <button
+                                type="button"
+                                class="btn btn-secondary"
+                                data-bs-dismiss="modal"
+                              >
+                                Close
+                              </button>
+                              <button type="button" class="btn btn-primary">
+                                Save changes
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- ends -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 2nd card -->
+          <div class="col">
+            <div class="p-3 border bg-light hgt">
+              <!-- adding card -->
+              <div class="row h-90">
+                <div class="col-12">
+                  <div class="card text-white bg-dark" style="">
+                    <img
+                      src="https://balajeegroup.com/thumbnails/HSE.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <button
+                        type="button"
+                        class="btn btn-primary"
+                        data-bs-toggle="modal"
+                        data-bs-target="#exampleModal2"
+                      >
+                        Launch demo modal
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="modal fade"
+            id="exampleModal2"
+            tabindex="-1"
+            aria-labelledby="exampleModalLabel2"
+            aria-hidden="true"
+          >
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel2">
+                    Modal title
+                  </h5>
+                  <button
+                    type="button"
+                    class="btn-close"
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                  ></button>
+                </div>
+                <div class="modal-body"><p>2nd</p></div>
+                <div class="modal-footer">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-dismiss="modal"
+                  >
+                    Close
+                  </button>
+                  <button type="button" class="btn btn-primary">
+                    Save changes
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- 2nd end -->
+          <div class="col">
+            <div class="p-3 border bg-light hgt">
+              <!-- adding card -->
+              <div class="row h-90">
+                <div class="col-12">
+                  <div class="card text-white bg-dark" style="">
+                    <img
+                      src="https://balajeegroup.com/thumbnails/HSE.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 border bg-light hgt">
+              <!-- adding card -->
+              <div class="row h-90">
+                <div class="col-12">
+                  <div class="card text-white bg-dark" style="">
+                    <img
+                      src="https://balajeegroup.com/thumbnails/HSE.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 border bg-light hgt">
+              <!-- adding card -->
+              <div class="row h-90">
+                <div class="col-12">
+                  <div class="card text-white bg-dark" style="">
+                    <img
+                      src="https://balajeegroup.com/thumbnails/HSE.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 border bg-light hgt">
+              <!-- adding card -->
+              <div class="row h-90">
+                <div class="col-12">
+                  <div class="card text-white bg-dark" style="">
+                    <img
+                      src="https://balajeegroup.com/thumbnails/HSE.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h1 class="p-5 bg-light">Ongoing projects</h1>
+      <div class="container">
+        <div class="row row-cols-2 row-cols-lg-3 g-2 g-lg-3">
+          <div class="col">
+            <div class="p-3 border bg-light hgt">
+              <!-- adding card -->
+              <div class="row h-90">
+                <div class="col-12">
+                  <div class="card text-white bg-dark" style="">
+                    <img
+                      src="https://balajeegroup.com/thumbnails/CAPTURE_T.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 border bg-light hgt">
+              <!-- adding card -->
+              <div class="row h-90">
+                <div class="col-12">
+                  <div class="card text-white bg-dark" style="">
+                    <img
+                      src="https://balajeegroup.com/thumbnails/CAPTURE_T.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 border bg-light hgt">
+              <!-- adding card -->
+              <div class="row h-90">
+                <div class="col-12">
+                  <div class="card text-white bg-dark" style="">
+                    <img
+                      src="https://balajeegroup.com/thumbnails/CAPTURE_T.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 border bg-light hgt">
+              <!-- adding card -->
+              <div class="row h-90">
+                <div class="col-12">
+                  <div class="card text-white bg-dark" style="">
+                    <img
+                      src="https://balajeegroup.com/thumbnails/CAPTURE_T.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 border bg-light hgt">
+              <!-- adding card -->
+              <div class="row h-90">
+                <div class="col-12">
+                  <div class="card text-white bg-dark" style="">
+                    <img
+                      src="https://balajeegroup.com/thumbnails/CAPTURE_T.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col">
+            <div class="p-3 border bg-light h-100">
+              <!-- adding card -->
+              <div class="row h-90">
+                <div class="col-12">
+                  <div class="card text-white bg-dark" style="">
+                    <img
+                      src="https://balajeegroup.com/thumbnails/CAPTURE_T.jpg"
+                      class="card-img-top"
+                      alt="..."
+                    />
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">
+                        Some quick example text to build on the card title and
+                        make up the bulk of the card's content.
+                      </p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr />
+    <div>
+      Carrers
+      <div class="row"></div>
+    </div>
+    <hr />
+    <!-- carrers -->
+    <h1>Carrers</h1>
+    <!-- footer start -->
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-dark text-muted">
+      <section class="p-3">
+        <div class="container text-center text-md-start mt-5">
+          <!-- Grid row -->
+          <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+              <!-- Content -->
+              <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3"></i>Balajee Group
+              </h6>
+              <p>
+                Balajee Infratech & Constructions Private Limited is keen to
+                focus on developing skills in the related service sector, an
+                oppurtuinity where prospects are expected to be more over the
+                years and to participate in the emerging growth of tomorrow.
+              </p>
+              <p>
+                <a href="#!" class="text-reset">About Us</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Business</h6>
+              <p>
+                <a href="#!" class="text-reset">Power Projects</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Infrastructure Projects</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Services</h6>
+              <p>
+                <a href="#!" class="text-reset">Services we provide</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Projects</h6>
+              <p>
+                <a href="#!" class="text-reset">Projects we completed</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Clintele</a>
+              </p>
+            </div>
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">About Balajee</h6>
+              <p>
+                <a href="#!" class="text-reset">Board of Directors</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Mission and Vision</a>
+              </p>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Corporate Governance</h6>
+              <p>
+                <a href="#!" class="text-reset">C.S.R</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">H.S.E</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Q.A</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Vigil Mechanism Policy</a>
+              </p>
+            </div>
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+              <!-- Links -->
+              <h6 class="text-uppercase fw-bold mb-4">Carrers</h6>
+              <p>
+                <a href="#!" class="text-reset">Recruitment Policy</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Life in Balajee</a>
+              </p>
+              <p>
+                <a href="#!" class="text-reset">Apply now</a>
+              </p>
+            </div>
+          </div>
+          <!-- Grid row -->
+        </div>
+      </section>
+      <!-- Section: Links  -->
+
+      <!-- Copyright -->
+      <div
+        class="text-center p-4"
+        style="background-color: rgba(0, 0, 0, 0.05)"
+      >
+        © 2021 Copyright:
+        <a class="text-reset fw-bold" href="https://mdbootstrap.com/"
+          >BalajeeGroups.com</a
+        >
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
     <!-- Button trigger modal -->
     <button
       type="button"
       class="btn btn-primary"
       data-bs-toggle="modal"
-      data-bs-target="#exampleModal"
+      data-bs-target="#exampleModal1"
     >
       Launch demo modal
     </button>
@@ -45,15 +858,15 @@
     <!-- Modal -->
     <div
       class="modal fade"
-      id="exampleModal"
+      id="exampleModal1"
       tabindex="-1"
-      aria-labelledby="exampleModalLabel"
+      aria-labelledby="exampleModalLabel1"
       aria-hidden="true"
     >
       <div class="modal-dialog">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <h5 class="modal-title" id="exampleModalLabel1">Modal title</h5>
             <button
               type="button"
               class="btn-close"
